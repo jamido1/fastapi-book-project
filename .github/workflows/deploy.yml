@@ -46,10 +46,10 @@ jobs:
             # pip install -r requirements.txt
 
             # Stop existing containers
-            compose down || true
+            docker-compose down || true
             
             # Build and start containers
-            compose up --build -d
+            docker-compose up --build -d
             
             # Verify containers are running
             docker ps
